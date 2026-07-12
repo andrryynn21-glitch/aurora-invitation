@@ -1,0 +1,25 @@
+:root {
+  /* ===== COLORS ===== */
+  --color-primary: #b78a56;
+  --color-primary-dark: #8c6740;
+  --color-background: #f8f6f2;
+  --color-surface: #ffffff;
+  --color-text: #2f2f2f;
+  --color-text-light: #777777;
+  --color-border: #e7dfd4;
+
+  /* ===== TYPOGRAPHY ===== */
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "Poppins", sans-serif;
+
+  /* ===== SPACING ===== */
+  --container-width: 1200px;
+  --section-padding: 100px;
+  --radius: 20px;
+
+  /* ===== SHADOW ===== */
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+
+  /* ===== TRANSITION ===== */
+  --transition: 0.35s ease;
+}

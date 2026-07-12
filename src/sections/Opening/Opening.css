@@ -1,0 +1,331 @@
+.opening {
+  position: relative;
+
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  overflow: hidden;
+
+  background: linear-gradient(180deg, #fbf8f3 0%, #f4eadf 100%);
+}
+
+.opening__content {
+  position: relative;
+
+  z-index: 5;
+
+  text-align: center;
+
+  width: 100%;
+
+  max-width: 720px;
+
+  padding: 40px 20px;
+
+  animation: fadeUp 1.2s ease;
+}
+
+.opening__frame {
+  position: absolute;
+
+  inset: 28px;
+
+  border: 1px solid rgba(190, 150, 90, 0.25);
+
+  border-radius: 30px;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+.opening__light {
+  position: absolute;
+
+  border-radius: 50%;
+
+  filter: blur(40px);
+}
+
+.opening__light--one {
+  width: 600px;
+
+  height: 600px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  top: -250px;
+
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.opening__light--two {
+  width: 500px;
+
+  height: 500px;
+
+  background: rgba(210, 180, 130, 0.18);
+
+  bottom: -200px;
+
+  right: -150px;
+}
+
+.opening__ornament {
+  position: absolute;
+
+  width: 300px;
+
+  height: 300px;
+
+  border-radius: 50%;
+
+  opacity: 0.15;
+}
+
+.ornament-left {
+  left: -150px;
+
+  top: -120px;
+
+  background: radial-gradient(circle, #c9a05a 2px, transparent 3px);
+
+  background-size: 30px 30px;
+}
+
+.ornament-right {
+  right: -150px;
+
+  bottom: -120px;
+
+  background: radial-gradient(circle, #c9a05a 2px, transparent 3px);
+
+  background-size: 30px 30px;
+}
+
+.opening__label {
+  font-size: 13px;
+
+  letter-spacing: 7px;
+
+  color: #b28a52;
+
+  margin-bottom: 35px;
+}
+
+.opening__title {
+  font-family: var(--font-heading);
+
+  font-size: 88px;
+
+  line-height: 1;
+
+  font-weight: 600;
+
+  color: #2d2b29;
+}
+
+.opening__title span {
+  display: block;
+
+  font-size: 60px;
+
+  color: #c49a62;
+
+  margin: 20px 0;
+}
+
+.opening__quote {
+  max-width: 400px;
+
+  margin: 35px auto 0;
+
+  font-size: 14px;
+
+  font-style: italic;
+
+  line-height: 1.8;
+
+  color: #777;
+}
+
+.opening__date {
+  margin-top: 25px;
+
+  font-size: 18px;
+
+  color: #555;
+}
+
+.opening__date::after {
+  content: "";
+
+  display: block;
+
+  width: 80px;
+
+  height: 1px;
+
+  background: #c49a62;
+
+  margin: 25px auto;
+}
+
+.opening__guest {
+  width: 350px;
+
+  margin: auto;
+
+  padding: 35px;
+
+  background: rgba(255, 255, 255, 0.55);
+
+  backdrop-filter: blur(25px);
+
+  border-radius: 30px;
+
+  border: 1px solid rgba(255, 255, 255, 0.8);
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+}
+
+.opening__guest p {
+  font-size: 14px;
+
+  color: #999;
+}
+
+.opening__guest h3 {
+  font-size: 17px;
+
+  font-weight: 400;
+
+  color: #555;
+}
+
+.opening__guest h2 {
+  font-family: var(--font-heading);
+
+  font-size: 35px;
+
+  color: #b68a4c;
+
+  margin-top: 12px;
+}
+
+.opening__button {
+  margin-top: 55px;
+
+  width: 270px;
+
+  height: 60px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: linear-gradient(135deg, #d9b875, #b88948);
+
+  color: white;
+
+  font-size: 16px;
+
+  cursor: pointer;
+
+  box-shadow: 0 20px 40px rgba(184, 137, 72, 0.35);
+
+  transition: 0.35s;
+}
+
+.opening__button:hover {
+  transform: translateY(-5px);
+}
+
+.opening__scroll {
+  margin-top: 35px;
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+
+  color: #999;
+}
+
+.opening__scroll span {
+  display: block;
+
+  width: 1px;
+
+  height: 40px;
+
+  background: #b68a4c;
+
+  margin: 0 auto 10px;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .opening__title {
+    font-size: 60px;
+  }
+
+  .opening__title span {
+    font-size: 45px;
+  }
+
+  .opening__guest {
+    width: 85%;
+  }
+
+  .opening__frame {
+    inset: 15px;
+  }
+}
+
+@media (max-width: 600px) {
+  .opening__title {
+    font-size: 55px;
+  }
+
+  .opening__title span {
+    font-size: 45px;
+
+    margin: 15px 0;
+  }
+
+  .opening__guest {
+    width: 90%;
+
+    padding: 30px 20px;
+  }
+
+  .opening__guest h2 {
+    font-size: 28px;
+  }
+
+  .opening__button {
+    width: 220px;
+
+    height: 55px;
+  }
+}

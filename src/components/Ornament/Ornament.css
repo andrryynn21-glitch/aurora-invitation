@@ -1,0 +1,110 @@
+.ornament {
+  position: fixed;
+
+  width: 250px;
+
+  height: 250px;
+
+  opacity: 0.18;
+
+  pointer-events: none;
+
+  z-index: 10;
+}
+
+.ornament--top-left {
+  top: -80px;
+
+  left: -80px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #c49a5c 0%, transparent 70%);
+}
+
+.ornament--top-right {
+  top: -80px;
+
+  right: -80px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #c49a5c 0%, transparent 70%);
+}
+
+.ornament--bottom-left {
+  bottom: -100px;
+
+  left: -100px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #b78a56 0%, transparent 70%);
+}
+
+.ornament--bottom-right {
+  bottom: -100px;
+
+  right: -100px;
+
+  border-radius: 50%;
+
+  background: radial-gradient(circle, #b78a56 0%, transparent 70%);
+}
+
+.sparkle {
+  position: fixed;
+
+  width: 8px;
+
+  height: 8px;
+
+  background: #c49a5c;
+
+  border-radius: 50%;
+
+  opacity: 0.7;
+
+  animation: sparkle 3s infinite;
+
+  z-index: 11;
+
+  pointer-events: none;
+}
+
+.sparkle--one {
+  top: 30%;
+
+  left: 15%;
+}
+
+.sparkle--two {
+  top: 60%;
+
+  right: 20%;
+
+  animation-delay: 1s;
+}
+
+.sparkle--three {
+  bottom: 25%;
+
+  left: 40%;
+
+  animation-delay: 2s;
+}
+
+@keyframes sparkle {
+  0%,
+  100% {
+    transform: scale(1);
+
+    opacity: 0.3;
+  }
+
+  50% {
+    transform: scale(2);
+
+    opacity: 1;
+  }
+}

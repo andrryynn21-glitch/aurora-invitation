@@ -1,0 +1,111 @@
+.gift {
+  min-height: 80vh;
+
+  padding: 120px 20px;
+
+  background: linear-gradient(180deg, #f3eadc, #fcfaf6);
+
+  text-align: center;
+}
+
+.gift__title p {
+  letter-spacing: 7px;
+
+  font-size: 13px;
+
+  color: #b78a56;
+}
+
+.gift__title h2 {
+  font-family: var(--font-heading);
+
+  font-size: 60px;
+
+  color: #333;
+
+  margin: 20px 0;
+}
+
+.gift__title span {
+  color: #777;
+
+  font-size: 16px;
+}
+
+.gift__cards {
+  margin-top: 70px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 40px;
+
+  flex-wrap: wrap;
+}
+
+.gift__card {
+  width: 320px;
+
+  padding: 45px 30px;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  border-radius: 35px;
+
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid rgba(196, 154, 92, 0.2);
+}
+
+.gift__card h3 {
+  font-family: var(--font-heading);
+
+  font-size: 35px;
+
+  color: #b78a56;
+}
+
+.number {
+  font-size: 25px;
+
+  letter-spacing: 2px;
+
+  color: #333;
+
+  margin-top: 25px;
+}
+
+.gift__card p {
+  color: #777;
+}
+
+.gift__card button {
+  margin-top: 30px;
+
+  padding: 14px 40px;
+
+  border: none;
+
+  border-radius: 50px;
+
+  background: linear-gradient(135deg, #d5b06d, #b88746);
+
+  color: white;
+
+  cursor: pointer;
+
+  font-size: 15px;
+
+  transition: 0.3s;
+}
+
+.gift__card button:hover {
+  transform: translateY(-5px);
+}
+
+@media (max-width: 600px) {
+  .gift__title h2 {
+    font-size: 45px;
+  }
+}

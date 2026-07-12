@@ -1,0 +1,55 @@
+.music {
+  position: fixed;
+
+  right: 30px;
+
+  bottom: 30px;
+
+  width: 55px;
+
+  height: 55px;
+
+  border-radius: 50%;
+
+  border: none;
+
+  background: #c49a5c;
+
+  color: white;
+
+  font-size: 22px;
+
+  cursor: pointer;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  z-index: 999;
+}
+
+.music.active {
+  animation: rotate 3s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .music-button {
+    width: 50px;
+
+    height: 50px;
+
+    right: 20px;
+
+    bottom: 20px;
+
+    font-size: 20px;
+  }
+}

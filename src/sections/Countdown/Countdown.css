@@ -1,0 +1,85 @@
+.countdown {
+  min-height: 70vh;
+
+  padding: 120px 20px;
+
+  background: linear-gradient(180deg, #fcfaf6, #f3eadc);
+
+  text-align: center;
+}
+
+.countdown__title p {
+  letter-spacing: 7px;
+
+  font-size: 13px;
+
+  color: #b78a56;
+}
+
+.countdown__title h2 {
+  font-family: var(--font-heading);
+
+  font-size: 55px;
+
+  color: #333;
+
+  margin-top: 20px;
+}
+
+.countdown__box {
+  margin-top: 70px;
+
+  display: flex;
+
+  justify-content: center;
+
+  gap: 30px;
+
+  flex-wrap: wrap;
+}
+
+.countdown__box div {
+  width: 130px;
+
+  height: 130px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  background: rgba(255, 255, 255, 0.8);
+
+  border-radius: 30px;
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.08);
+
+  border: 1px solid rgba(196, 154, 92, 0.2);
+}
+
+.countdown__box h3 {
+  font-family: var(--font-heading);
+
+  font-size: 45px;
+
+  color: #b78a56;
+}
+
+.countdown__box span {
+  color: #777;
+
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .countdown__title h2 {
+    font-size: 40px;
+  }
+
+  .countdown__box div {
+    width: 110px;
+
+    height: 110px;
+  }
+}
