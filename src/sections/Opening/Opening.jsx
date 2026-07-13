@@ -1,31 +1,34 @@
 import "./Opening.css";
 
+import Guest from "../../components/Guest/Guest";
+
+import invitationData from "../../data/invitation";
+
 function Opening({ onOpen }) {
   return (
     <section className="opening">
-      <div className="opening__frame"></div>
+      <div className="opening__overlay"></div>
 
-      <div className="light1"></div>
-      <div className="light2"></div>
+      <div className="opening__ornament">✦</div>
 
       <div className="opening__content">
-        <p className="opening__label">THE WEDDING OF</p>
+        <p className="opening__subtitle">THE WEDDING OF</p>
 
-        <h1 className="opening__title">
-          Fulan
-          <span>&</span>
-          Fulanah
+        <h1>
+          <span>{invitationData.couple.groom}</span>
+
+          <small>&</small>
+
+          <span>{invitationData.couple.bride}</span>
         </h1>
 
-        <p className="opening__date">Minggu, 12 Desember 2027</p>
+        <p className="opening__date">
+          {invitationData.event.day},
+          <br />
+          {invitationData.event.date}
+        </p>
 
-        <div className="opening__guest">
-          <p>Kepada Yth.</p>
-
-          <h3>Bapak/Ibu/Saudara/i</h3>
-
-          <h2>Nama Tamu</h2>
-        </div>
+        <Guest />
 
         <button className="opening__button" onClick={onOpen}>
           Buka Undangan

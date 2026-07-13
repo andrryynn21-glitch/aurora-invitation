@@ -1,0 +1,145 @@
+.luxury-rsvp {
+  padding: 100px 25px;
+
+  background: #faf7f2;
+}
+
+/* HEADER */
+
+.luxury-rsvp__header {
+  text-align: center;
+
+  max-width: 500px;
+
+  margin: 0 auto 60px;
+}
+
+.luxury-rsvp__header span {
+  font-size: 12px;
+
+  letter-spacing: 6px;
+
+  color: #b89355;
+}
+
+.luxury-rsvp__header h2 {
+  font-family: "Times New Roman", serif;
+
+  font-size: 45px;
+
+  color: #2b241c;
+
+  margin: 20px 0;
+}
+
+.luxury-rsvp__header p {
+  color: #777;
+
+  line-height: 1.8;
+}
+
+/* CARD */
+
+.luxury-rsvp__card {
+  max-width: 450px;
+
+  margin: auto;
+
+  background: white;
+
+  padding: 45px 35px;
+
+  border-radius: 35px;
+
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.1);
+}
+
+/* INPUT */
+
+.luxury-rsvp__card input,
+.luxury-rsvp__card select,
+.luxury-rsvp__card textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  border: 1px solid rgba(180, 140, 80, 0.25);
+
+  background: #fffdf9;
+
+  padding: 16px 18px;
+
+  border-radius: 18px;
+
+  font-size: 15px;
+
+  font-family: inherit;
+
+  margin-bottom: 20px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+.luxury-rsvp__card input:focus,
+.luxury-rsvp__card select:focus,
+.luxury-rsvp__card textarea:focus {
+  border-color: #b89355;
+
+  box-shadow: 0 0 0 4px rgba(184, 147, 85, 0.12);
+}
+
+.luxury-rsvp__card textarea {
+  height: 130px;
+
+  resize: none;
+}
+
+/* BUTTON */
+
+.luxury-rsvp__card button {
+  width: 100%;
+
+  padding: 16px;
+
+  border: none;
+
+  border-radius: 40px;
+
+  background: #b89355;
+
+  color: white;
+
+  font-size: 15px;
+
+  letter-spacing: 1px;
+
+  cursor: pointer;
+
+  transition: 0.4s;
+}
+
+.luxury-rsvp__card button:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 15px 30px rgba(184, 147, 85, 0.35);
+}
+
+/* MOBILE */
+
+@media (max-width: 768px) {
+  .luxury-rsvp {
+    padding: 80px 20px;
+  }
+
+  .luxury-rsvp__header h2 {
+    font-size: 34px;
+  }
+
+  .luxury-rsvp__card {
+    padding: 35px 25px;
+
+    border-radius: 30px;
+  }
+}

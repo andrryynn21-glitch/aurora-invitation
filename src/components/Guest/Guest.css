@@ -1,0 +1,25 @@
+.guest-card {
+  background: white;
+
+  padding: 25px 40px;
+
+  border-radius: 25px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.guest-card p {
+  color: #999;
+
+  margin-bottom: 10px;
+}
+
+.guest-card h3 {
+  font-family: serif;
+
+  color: #c49a5c;
+
+  font-size: 28px;
+}

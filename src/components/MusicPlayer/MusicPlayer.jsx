@@ -1,27 +1,38 @@
-import { forwardRef, useState } from "react";
+import { forwardRef, useImperativeHandle, useRef, useState } from "react";
+
 import "./MusicPlayer.css";
 
 const MusicPlayer = forwardRef(({ music }, ref) => {
+  const audioRef = useRef();
+
   const [playing, setPlaying] = useState(false);
 
-  const toggleMusic = () => {
-    if (!playing) {
-      ref.current.play();
+  useImperativeHandle(ref, () => ({
+    play() {
+      audioRef.current.play();
 
       setPlaying(true);
-    } else {
-      ref.current.pause();
+    },
+  }));
+
+  const toggleMusic = () => {
+    if (playing) {
+      audioRef.current.pause();
 
       setPlaying(false);
+    } else {
+      audioRef.current.play();
+
+      setPlaying(true);
     }
   };
 
   return (
     <>
-      <audio ref={ref} src={music} loop />
+      <audio ref={audioRef} src={music} loop />
 
       <button
-        className={`music-button ${playing ? "playing" : ""}`}
+        className={playing ? "music playing" : "music"}
         onClick={toggleMusic}
       >
         🎵

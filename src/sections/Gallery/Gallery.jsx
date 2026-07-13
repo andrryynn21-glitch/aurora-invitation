@@ -1,30 +1,33 @@
+import { useState } from "react";
 import "./Gallery.css";
 
-import gallery1 from "../../assets/images/gallery1.jpg";
-import gallery2 from "../../assets/images/gallery2.jpg";
-import gallery3 from "../../assets/images/gallery3.jpg";
-import gallery4 from "../../assets/images/gallery4.jpg";
-import gallery5 from "../../assets/images/gallery5.jpg";
-import gallery6 from "../../assets/images/gallery6.jpg";
+import invitationData from "../../data/invitation";
 
 function Gallery() {
-  const photos = [gallery1, gallery2, gallery3, gallery4, gallery5, gallery6];
+  const [activeImage, setActiveImage] = useState(null);
 
   return (
     <section className="gallery">
-      <div className="gallery__title">
-        <p>OUR MOMENTS</p>
+      <p className="gallery__label">OUR MOMENTS</p>
 
-        <h2>Gallery</h2>
-      </div>
+      <h2>Beautiful Memories</h2>
 
       <div className="gallery__grid">
-        {photos.map((photo, index) => (
-          <div className="gallery__item" key={index}>
-            <img data-aos="fade-up" src={photo} alt="wedding" />
-          </div>
+        {invitationData.gallery?.map((image, index) => (
+          <img
+            key={index}
+            src={image}
+            onClick={() => setActiveImage(image)}
+            className="gallery__image"
+          />
         ))}
       </div>
+
+      {activeImage && (
+        <div className="gallery__modal" onClick={() => setActiveImage(null)}>
+          <img src={activeImage} />
+        </div>
+      )}
     </section>
   );
 }

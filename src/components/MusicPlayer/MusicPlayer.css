@@ -1,19 +1,19 @@
-.music-button {
+.music {
   position: fixed;
 
-  right: 30px;
+  right: 25px;
 
-  bottom: 30px;
+  bottom: 25px;
 
-  width: 60px;
+  width: 55px;
 
-  height: 60px;
+  height: 55px;
 
   border-radius: 50%;
 
   border: none;
 
-  background: linear-gradient(135deg, #d5b06d, #b88746);
+  background: #c49a5c;
 
   color: white;
 
@@ -21,16 +21,16 @@
 
   cursor: pointer;
 
-  z-index: 9999;
+  z-index: 999;
 
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-.music-button.playing {
-  animation: spin 4s linear infinite;
+.music.playing {
+  animation: rotate 3s linear infinite;
 }
 
-@keyframes spin {
+@keyframes rotate {
   from {
     transform: rotate(0deg);
   }
@@ -38,8 +38,4 @@
   to {
     transform: rotate(360deg);
   }
-}
-
-.music-button:hover {
-  transform: scale(1.1);
 }

@@ -7,9 +7,9 @@ function LoadingScreen() {
         <p>THE WEDDING OF</p>
 
         <h1>
-          Fulan
+          Reno
           <span>&</span>
-          Fulanah
+          Vina
         </h1>
 
         <div className="loading__circle"></div>

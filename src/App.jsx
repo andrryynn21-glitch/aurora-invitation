@@ -1,17 +1,15 @@
+import AOS from "aos";
+import "aos/dist/aos.css";
+
 import { useRef, useState, useEffect } from "react";
 
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 
 import Opening from "./sections/Opening/Opening";
-import Hero from "./sections/Hero/Hero";
 
-import Couple from "./sections/Couple/Couple";
-import Event from "./sections/Event/Event";
-import Countdown from "./sections/Countdown/Countdown";
-import Story from "./sections/Story/Story";
-import Gallery from "./sections/Gallery/Gallery";
-import Gift from "./sections/Gift/Gift";
-import RSVP from "./sections/RSVP/RSVP";
+import themes from "./themes/themeConfig";
+
+import Guestbook from "./sections/Guestbook/Guestbook";
 
 import MusicPlayer from "./components/MusicPlayer/MusicPlayer";
 
@@ -22,7 +20,23 @@ function App() {
 
   const [loading, setLoading] = useState(true);
 
+  // aktifkan tema
+
+  const Theme = themes.luxury;
+
   useEffect(() => {
+    // AOS Animation
+
+    AOS.init({
+      duration: 1200,
+
+      once: true,
+
+      offset: 100,
+    });
+
+    // Loading Screen
+
     const timer = setTimeout(() => {
       setLoading(false);
     }, 2500);
@@ -35,9 +49,13 @@ function App() {
       audioRef.current.play();
     }
 
-    document.getElementById("hero").scrollIntoView({
-      behavior: "smooth",
-    });
+    const hero = document.getElementById("hero");
+
+    if (hero) {
+      hero.scrollIntoView({
+        behavior: "smooth",
+      });
+    }
   };
 
   if (loading) {
@@ -50,21 +68,27 @@ function App() {
 
       <Opening onOpen={handleOpenInvitation} />
 
-      <Hero />
+      {/* THEME LUXURY */}
 
-      <Couple />
+      <Theme.hero />
 
-      <Event />
+      <Theme.couple />
 
-      <Countdown />
+      <Theme.event />
 
-      <Story />
+      <Theme.countdown />
 
-      <Gallery />
+      <Theme.story />
 
-      <Gift />
+      <Theme.gallery />
 
-      <RSVP />
+      <Theme.gift />
+
+      <Theme.rsvp />
+
+      {/* GLOBAL */}
+
+      <Guestbook />
     </>
   );
 }

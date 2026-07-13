@@ -1,81 +1,72 @@
 import { useState } from "react";
 import "./RSVP.css";
 
+import invitationData from "../../data/invitation";
+import { getGuestName } from "../../utils/guest";
+
 function RSVP() {
-  const [form, setForm] = useState({
-    name: "",
-    attendance: "Hadir",
-    guest: "1",
-    message: "",
-  });
+  const guest = getGuestName();
 
-  const handleChange = (e) => {
-    setForm({
-      ...form,
+  const [status, setStatus] = useState("Hadir");
+  const [total, setTotal] = useState(1);
 
-      [e.target.name]: e.target.value,
-    });
-  };
+  const sendWhatsApp = () => {
+    const message = `
+Halo ${invitationData.couple.groom} & ${invitationData.couple.bride},
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+Saya ${guest} ingin mengkonfirmasi kehadiran.
 
-    alert(`Terima kasih ${form.name} atas konfirmasinya 🤍`);
+Status: ${status}
 
-    setForm({
-      name: "",
-      attendance: "Hadir",
-      guest: "1",
-      message: "",
-    });
+Jumlah tamu: ${total} orang
+
+Terima kasih 🙏
+`;
+
+    const url = `https://wa.me/${invitationData.whatsapp.number}?text=${encodeURIComponent(message)}`;
+
+    window.open(url, "_blank");
   };
 
   return (
     <section className="rsvp">
-      <div className="rsvp__title">
-        <p>RSVP</p>
+      <p className="rsvp__label">RSVP</p>
 
-        <h2>Konfirmasi Kehadiran</h2>
+      <h2>Konfirmasi Kehadiran</h2>
+
+      <p>Mohon konfirmasi kehadiran Anda</p>
+
+      <div className="rsvp__form">
+        <div className="guest-name">
+          <label>Nama Tamu</label>
+
+          <input value={guest} readOnly />
+        </div>
+
+        <div>
+          <label>Kehadiran</label>
+
+          <select value={status} onChange={(e) => setStatus(e.target.value)}>
+            <option>Hadir</option>
+
+            <option>Tidak Hadir</option>
+          </select>
+        </div>
+
+        <div>
+          <label>Jumlah Tamu</label>
+
+          <select value={total} onChange={(e) => setTotal(e.target.value)}>
+            <option value="1">1 Orang</option>
+
+            <option value="2">2 Orang</option>
+
+            <option value="3">3 Orang</option>
+          </select>
+        </div>
+
+        <button onClick={sendWhatsApp}>Konfirmasi via WhatsApp</button>
       </div>
-
-      <form className="rsvp__form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Nama Anda"
-          value={form.name}
-          onChange={handleChange}
-        />
-
-        <select
-          name="attendance"
-          value={form.attendance}
-          onChange={handleChange}
-        >
-          <option>Hadir</option>
-
-          <option>Tidak Hadir</option>
-        </select>
-
-        <select name="guest" value={form.guest} onChange={handleChange}>
-          <option value="1">1 Orang</option>
-
-          <option value="2">2 Orang</option>
-
-          <option value="3">3 Orang</option>
-
-          <option value="4">4 Orang</option>
-        </select>
-
-        <textarea
-          name="message"
-          placeholder="Tuliskan ucapan dan doa..."
-          value={form.message}
-          onChange={handleChange}
-        />
-
-        <button>Kirim Konfirmasi</button>
-      </form>
     </section>
   );
 }

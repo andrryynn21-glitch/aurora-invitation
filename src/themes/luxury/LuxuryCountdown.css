@@ -1,0 +1,87 @@
+.luxury-countdown {
+  padding: 90px 20px;
+
+  text-align: center;
+
+  background: #faf7f2;
+}
+
+.luxury-countdown__subtitle {
+  font-size: 12px;
+
+  letter-spacing: 7px;
+
+  color: #b58a55;
+
+  margin-bottom: 25px;
+}
+
+.luxury-countdown h2 {
+  font-family: var(--font-heading);
+
+  font-size: 42px;
+
+  color: #333;
+}
+
+.luxury-countdown h2 span {
+  display: block;
+
+  font-size: 35px;
+
+  color: #c49a5c;
+
+  margin: 10px;
+}
+
+.luxury-countdown__grid {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 12px;
+
+  max-width: 420px;
+
+  margin: 40px auto 0;
+}
+
+.count-box {
+  background: white;
+
+  padding: 22px 10px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.count-box strong {
+  font-size: 34px;
+
+  font-family: var(--font-heading);
+
+  color: #333;
+}
+
+.count-box p {
+  margin-top: 8px;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+@media (max-width: 500px) {
+  .luxury-countdown__grid {
+    gap: 10px;
+  }
+
+  .count-box {
+    padding: 18px 5px;
+  }
+
+  .count-box strong {
+    font-size: 25px;
+  }
+}

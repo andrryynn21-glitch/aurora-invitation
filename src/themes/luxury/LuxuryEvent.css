@@ -1,0 +1,93 @@
+.luxury-event {
+  padding: 80px 25px;
+
+  background: #faf7f2;
+
+  text-align: center;
+}
+
+.luxury-event__container {
+  max-width: 420px;
+
+  margin: auto;
+}
+
+.luxury-event__label {
+  font-size: 12px;
+
+  letter-spacing: 6px;
+
+  color: #b08a55;
+
+  margin-bottom: 15px;
+}
+
+.luxury-event h2 {
+  font-family: var(--font-heading);
+
+  font-size: 38px;
+
+  color: #2f2f2f;
+
+  margin-bottom: 40px;
+}
+
+.luxury-event__info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 25px;
+}
+
+.luxury-event__item {
+  background: rgba(255, 255, 255, 0.7);
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.luxury-event__item span {
+  font-size: 11px;
+
+  letter-spacing: 3px;
+
+  color: #a78b62;
+}
+
+.luxury-event__item h3 {
+  margin-top: 12px;
+
+  font-size: 22px;
+
+  color: #333;
+}
+
+.luxury-event__item p {
+  color: #777;
+
+  margin-top: 8px;
+}
+
+.luxury-event__item button {
+  margin-top: 15px;
+
+  border: none;
+
+  padding: 12px 25px;
+
+  border-radius: 30px;
+
+  background: #c89b55;
+
+  color: white;
+
+  cursor: pointer;
+}
+
+.luxury-event__item button:hover {
+  opacity: 0.8;
+}

@@ -1,42 +1,57 @@
+import { useState } from "react";
 import "./Gift.css";
 
+import invitationData from "../../data/invitation";
+
 function Gift() {
+  const [copied, setCopied] = useState("");
+
   const copyNumber = (number) => {
     navigator.clipboard.writeText(number);
 
-    alert("Nomor berhasil disalin 🤍");
+    setCopied(number);
+
+    setTimeout(() => {
+      setCopied("");
+    }, 2000);
   };
 
   return (
     <section className="gift">
-      <div className="gift__title">
-        <p>DIGITAL GIFT</p>
+      <p className="gift__label">DIGITAL GIFT</p>
 
-        <h2>Wedding Gift</h2>
+      <h2>Wedding Gift</h2>
 
-        <span>Doa restu Anda adalah hadiah terindah bagi kami</span>
+      <p className="gift__desc">
+        Doa restu Anda adalah hadiah terindah bagi kami.
+      </p>
+
+      <div className="gift__card">
+        <h3>{invitationData.gift.bank.name}</h3>
+
+        <p className="gift__number">{invitationData.gift.bank.number}</p>
+
+        <p>a.n {invitationData.gift.bank.owner}</p>
+
+        <button onClick={() => copyNumber(invitationData.gift.bank.number)}>
+          {copied === invitationData.gift.bank.number
+            ? "Copied ✓"
+            : "Copy Rekening"}
+        </button>
       </div>
 
-      <div className="gift__cards" data-aos="fade-up">
-        <div className="gift__card">
-          <h3>Bank BCA</h3>
+      <div className="gift__card">
+        <h3>{invitationData.gift.ewallet.name}</h3>
 
-          <p className="number">1234567890</p>
+        <p className="gift__number">{invitationData.gift.ewallet.number}</p>
 
-          <p>a.n Fulan</p>
+        <p>a.n {invitationData.gift.ewallet.owner}</p>
 
-          <button onClick={() => copyNumber("1234567890")}>Copy</button>
-        </div>
-
-        <div className="gift__card">
-          <h3>E-Wallet</h3>
-
-          <p className="number">081234567890</p>
-
-          <p>a.n Fulanah</p>
-
-          <button onClick={() => copyNumber("081234567890")}>Copy</button>
-        </div>
+        <button onClick={() => copyNumber(invitationData.gift.ewallet.number)}>
+          {copied === invitationData.gift.ewallet.number
+            ? "Copied ✓"
+            : "Copy E-Wallet"}
+        </button>
       </div>
     </section>
   );

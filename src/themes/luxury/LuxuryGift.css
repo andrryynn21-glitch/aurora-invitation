@@ -1,0 +1,167 @@
+.luxury-gift {
+  padding: 100px 25px;
+
+  background: #faf7f2;
+}
+
+.luxury-gift__header {
+  text-align: center;
+
+  margin-bottom: 60px;
+}
+
+.luxury-gift__header span {
+  font-size: 12px;
+
+  letter-spacing: 5px;
+
+  color: #b89355;
+}
+
+.luxury-gift__header h2 {
+  font-family: serif;
+
+  font-size: 45px;
+
+  margin: 20px 0;
+
+  color: #2b241c;
+}
+
+.luxury-gift__header p {
+  color: #777;
+}
+
+.luxury-gift__container {
+  display: flex;
+
+  justify-content: center;
+
+  gap: 35px;
+
+  flex-wrap: wrap;
+}
+
+.gift-card {
+  width: 300px;
+
+  background: white;
+
+  padding: 40px 30px;
+
+  border-radius: 30px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+
+  transition: 0.4s;
+}
+
+.gift-card:hover {
+  transform: translateY(-10px);
+}
+
+.gift-icon {
+  font-size: 30px;
+
+  color: #b89355;
+}
+
+.gift-card h3 {
+  font-size: 25px;
+
+  font-family: serif;
+
+  margin: 20px 0 5px;
+}
+
+.owner {
+  color: #777;
+}
+
+.gift-card h4 {
+  font-size: 20px;
+
+  letter-spacing: 2px;
+
+  margin: 25px 0;
+
+  color: #2b241c;
+}
+
+.gift-card button {
+  background: #b89355;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 25px;
+
+  border-radius: 30px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.gift-card button:hover {
+  opacity: 0.8;
+}
+
+.qris-card {
+  margin: 70px auto 0;
+
+  max-width: 350px;
+
+  background: white;
+
+  padding: 35px;
+
+  border-radius: 30px;
+
+  text-align: center;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+}
+
+.qris-box {
+  height: 200px;
+
+  display: flex;
+
+  justify-content: center;
+
+  align-items: center;
+
+  background: #eee;
+
+  border-radius: 20px;
+
+  font-size: 40px;
+
+  font-weight: bold;
+
+  margin: 25px 0;
+
+  color: #777;
+}
+
+.qris-card p {
+  color: #777;
+
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .luxury-gift__header h2 {
+    font-size: 35px;
+  }
+
+  .gift-card {
+    width: 100%;
+
+    max-width: 320px;
+  }
+}
